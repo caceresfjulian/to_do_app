@@ -7,11 +7,11 @@ class TodoForm extends React.Component {
             <div className="container text-center">
                 <img src={logo} className="App-logo" alt="logo"/>
                 <div className="card">
-                <h3 class="card-title pt-2">Task Generator</h3>
+                <h3 className="card-title pt-2">Task Generator</h3>
                     <form>
                         <div className="form-group">
-                            <label for="taskTitle">Title:</label>
-                            <input type="text" id="taskTitle" className="ml-2"/>
+                            <label htmlFor="taskTitle">Title:</label>
+                            <input type="text" id="taskTitle" className="ml-2" onChange={this.props.onChange}/>
                         </div>
                         <button type="submit" className="btn btn-primary mb-2">Submit</button>
                     </form>
