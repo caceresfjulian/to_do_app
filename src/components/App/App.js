@@ -44,6 +44,10 @@ class App extends React.Component {
     })    
   }
 
+  onRemoveItem (){
+    console.log('Hello');
+  }
+
   render() {
     return (
       <div className="container">
@@ -52,7 +56,7 @@ class App extends React.Component {
             <TodoForm onChange={this.onChangeValue} onClick={this.onAddItem} todos={this.state.todos}/>
           </div>
           <div className="col-8">
-          <TodoList todos={this.state.todos}/>
+          <TodoList todos={this.state.todos} onClick={this.onRemoveItem}/>
           </div>
         </div>
       </div>
