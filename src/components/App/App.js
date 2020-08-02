@@ -27,12 +27,16 @@ class App extends React.Component {
     console.log({name, value})
   }
 
+  onAddItem (event){
+    event.preventDefault();    
+  }
+
   render() {
     return (
       <div className="container">
         <div className="row">
           <div className="col">
-            <TodoForm onChange={this.onChangeValue}/>
+            <TodoForm onChange={this.onChangeValue} onClick={this.onAddItem}/>
           </div>
           <div className="col-8">
           <TodoList todos={this.state.todos}/>

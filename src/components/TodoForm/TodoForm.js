@@ -35,7 +35,7 @@ class TodoForm extends React.Component {
                                 <option value="agent_5">Agent 5</option>
                             </select>
                         </div>
-                        <button type="submit" className="btn btn-primary mb-2">Submit</button>
+                        <button type="submit" className="btn btn-primary mb-2" onClick={this.props.onClick}>Submit</button>
                     </form>
                 </div>
             </div>

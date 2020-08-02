@@ -1,6 +1,7 @@
 import React from 'react';
 import Todos from '../Todos/Todos';
 
+
 class TodoList extends React.Component {
     render(){
         return(
@@ -13,6 +14,7 @@ class TodoList extends React.Component {
                                 description={todo.description}
                                 priority={todo.priority}
                                 assignee={todo.assignee}
+                                key={this.props.todos.indexOf(todo)}
                             />
                         )
                     })
