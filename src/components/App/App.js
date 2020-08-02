@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import TodoForm from '../TodoForm/TodoForm';
+import TodoList from '../TodoList/TodoList';
 
 class App extends React.Component {
   constructor(props){
@@ -34,6 +35,7 @@ class App extends React.Component {
             <TodoForm onChange={this.onChangeValue}/>
           </div>
           <div className="col-8">
+          <TodoList todos={this.state.todos}/>
           </div>
         </div>
       </div>
