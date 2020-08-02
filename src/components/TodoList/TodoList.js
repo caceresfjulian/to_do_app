@@ -15,6 +15,7 @@ class TodoList extends React.Component {
                                 priority={todo.priority}
                                 assignee={todo.assignee}
                                 key={this.props.todos.indexOf(todo)}
+                                id={this.props.todos.indexOf(todo)}
                                 onClick={this.props.onClick}
                             />
                         )

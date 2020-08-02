@@ -20,6 +20,7 @@ class App extends React.Component {
     }
     this.onChangeValue = this.onChangeValue.bind(this);
     this.onAddItem = this.onAddItem.bind(this);
+    this.onRemoveItem = this.onRemoveItem.bind(this);
   }
 
   onChangeValue (event) {
@@ -44,8 +45,8 @@ class App extends React.Component {
     })    
   }
 
-  onRemoveItem (){
-    console.log('Hello');
+  onRemoveItem (index){
+    console.log(index);
   }
 
   render() {
