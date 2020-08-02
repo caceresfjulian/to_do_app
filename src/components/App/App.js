@@ -46,7 +46,10 @@ class App extends React.Component {
   }
 
   onRemoveItem (index){
-    console.log(index);
+    this.setState({
+      todos: this.state.todos.filter( e => {
+      return index !== this.state.todos.indexOf(e) })
+    })
   }
 
   render() {
