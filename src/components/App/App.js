@@ -39,8 +39,7 @@ class App extends React.Component {
         } ];
 
       return {
-        todos,
-        title: ''
+        todos
       }
     })    
   }
