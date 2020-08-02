@@ -15,8 +15,8 @@ class App extends React.Component {
       ],
       title: '',
       description: '',
-      priority:'',
-      assignee:'',
+      priority:'high',
+      assignee:'agent 1',
     }
     this.onChangeValue = this.onChangeValue.bind(this);
     this.onAddItem = this.onAddItem.bind(this);
