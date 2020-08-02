@@ -7,22 +7,24 @@ class App extends React.Component {
     super(props);
     this.state = {
       todos: [
-        {title: 'Task 1', description: 'Description 1', priority:'high', asignee:'agent 1' },
-        {title: 'Task 2', description: 'Description 2', priority: 'low', asignee:'agent 2'},
-        {title: 'Task 3', description: 'Description 3', priority: 'normal', asignee:'agent 3'},
-        {title: 'Task 4', description: 'Description 4', priority: 'high', asignee: 'agent 4'}
+        {title: 'Task 1', description: 'Description 1', priority:'high', assignee:'agent 1' },
+        {title: 'Task 2', description: 'Description 2', priority: 'low', assignee:'agent 2'},
+        {title: 'Task 3', description: 'Description 3', priority: 'normal', assignee:'agent 3'},
+        {title: 'Task 4', description: 'Description 4', priority: 'high', assignee: 'agent 4'}
       ],
-      value: '',
+      title: '',
+      description: '',
+      priority:'',
+      assignee:'',
     }
     this.onChangeValue = this.onChangeValue.bind(this);
   }
 
-  onChangeValue = event => {
-    this.setState({value: event.target.value })
-    console.log(event.target.value)
+  onChangeValue (event) {
+    let {name, value} = event.target;
+    this.setState({[name]: value })
+    console.log({name, value})
   }
-
-
 
   render() {
     return (
