@@ -6,20 +6,20 @@ class TodoForm extends React.Component {
         return (
             <div className="container text-center">
                 <img src={logo} className="App-logo" alt="logo"/>
-                <div className="card">
+                <div className="card p-3">
                 <h3 className="card-title pt-2">Task Generator</h3>
                     <form>
                         <div className="form-group">
                             <label htmlFor="taskTitle">Title:</label>
-                            <input type="text" id="taskTitle" className="ml-2" onChange={this.props.onChange} name="title"/>
+                            <input type="text" id="taskTitle" className="form-control" onChange={this.props.onChange} name="title"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="taskDescription">Description:</label>
-                            <input type="text" id="taskDescription" className="ml-2" onChange={this.props.onChange} name="description"/>
+                            <input type="text" id="taskDescription" className="form-control" onChange={this.props.onChange} name="description"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="taskPriority">Priority:</label>
-                            <select id="taskPriority" className="ml-2" onChange={this.props.onChange} name="priority">
+                            <select id="taskPriority" className="form-control" onChange={this.props.onChange} name="priority">
                                 <option value="high">High</option>
                                 <option value="normal">Normal</option>
                                 <option value="low">Low</option>
@@ -27,7 +27,7 @@ class TodoForm extends React.Component {
                         </div>
                         <div className="form-group">
                             <label htmlFor="taskAssignee">Assignee:</label>
-                            <select id="taskAssignee" className="ml-2" onChange={this.props.onChange} name="assignee">
+                            <select id="taskAssignee" className="form-control" onChange={this.props.onChange} name="assignee">
                                 <option value="agent 1">Agent 1</option>
                                 <option value="agent 2">Agent 2</option>
                                 <option value="agent 3">Agent 3</option>
