@@ -3,7 +3,7 @@ import React from 'react';
 class Todos extends React.Component {
     render() {
         return (
-            <div className="card col-3 m-4">
+            <div className="card col-3 m-3">
                 <div className="card-body">
                     <h5 className="card-title">{this.props.title}</h5>
                     <h6 className="card-subtitle mb-2 text-muted">{this.props.assignee}</h6>
