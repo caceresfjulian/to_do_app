@@ -7,7 +7,8 @@ class TodoList extends React.Component {
         return(
             <div className="row">
                 {
-                    this.props.todos.map(todo =>{
+                    this.props.todos.map(todo => {
+                        if (this.props.todos.indexOf(todo) < 9){    
                         return( 
                             <Todos 
                                 title={todo.title}
@@ -18,7 +19,9 @@ class TodoList extends React.Component {
                                 id={this.props.todos.indexOf(todo)}
                                 onClick={this.props.onClick}
                             />
-                        )
+                        )} else {
+                            return false 
+                        }
                     })
                 }
             </div>
