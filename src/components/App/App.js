@@ -19,6 +19,7 @@ class App extends React.Component {
       assignee:'',
     }
     this.onChangeValue = this.onChangeValue.bind(this);
+    this.onAddItem = this.onAddItem.bind(this);
   }
 
   onChangeValue (event) {
@@ -28,7 +29,20 @@ class App extends React.Component {
   }
 
   onAddItem (event){
-    event.preventDefault();    
+    event.preventDefault();
+    this.setState( state => {
+      const todos = [...state.todos, 
+        {title: state.title, 
+          description: state.description,
+          priority: state.priority,
+          assignee: state.assignee,
+        } ];
+
+      return {
+        todos,
+        title: ''
+      }
+    })    
   }
 
   render() {
@@ -36,7 +50,7 @@ class App extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col">
-            <TodoForm onChange={this.onChangeValue} onClick={this.onAddItem}/>
+            <TodoForm onChange={this.onChangeValue} onClick={this.onAddItem} todos={this.state.todos}/>
           </div>
           <div className="col-8">
           <TodoList todos={this.state.todos}/>

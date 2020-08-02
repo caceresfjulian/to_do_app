@@ -28,11 +28,11 @@ class TodoForm extends React.Component {
                         <div className="form-group">
                             <label htmlFor="taskAssignee">Assignee:</label>
                             <select id="taskAssignee" className="ml-2" onChange={this.props.onChange} name="assignee">
-                                <option value="agent_1">Agent 1</option>
-                                <option value="agent_2">Agent 2</option>
-                                <option value="agent_3">Agent 3</option>
-                                <option value="agent_4">Agent 4</option>
-                                <option value="agent_5">Agent 5</option>
+                                <option value="agent 1">Agent 1</option>
+                                <option value="agent 2">Agent 2</option>
+                                <option value="agent 3">Agent 3</option>
+                                <option value="agent 4">Agent 4</option>
+                                <option value="agent 5">Agent 5</option>
                             </select>
                         </div>
                         <button type="submit" className="btn btn-primary mb-2" onClick={this.props.onClick}>Submit</button>
