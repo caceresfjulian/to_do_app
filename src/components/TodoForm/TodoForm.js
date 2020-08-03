@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from './logo.svg';
-import SearchButtons from '../SearchButtons/SearchButtons';
 
 class TodoForm extends React.Component {
     render() {
@@ -36,7 +35,7 @@ class TodoForm extends React.Component {
                                 <option value="agent 5">Agent 5</option>
                             </select>
                         </div>
-                        <SearchButtons onClick={this.props.onClick} onClick2={this.props.onClick2} onClick3={this.props.onClick3} counter={this.props.counter}/>
+                        <button type="submit" className="btn btn-primary mx-4" onClick={this.props.onClick}>Submit</button>
                     </form>
                 </div>
             </div>

@@ -3,6 +3,7 @@ import './App.css';
 import TodoForm from '../TodoForm/TodoForm';
 import TodoList from '../TodoList/TodoList';
 import NavBar from '../NavBar/NavBar';
+import SearchButtons from '../SearchButtons/SearchButtons';
 
 class App extends React.Component {
   constructor(props) {
@@ -89,11 +90,14 @@ class App extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col">
-              <TodoForm onChange={this.onChangeValue} onClick={this.onAddItem} onClick2={this.addToRange} onClick3={this.substractToRange} todos={this.state.todos} counter={this.state.todos.length}/>
+              <TodoForm onChange={this.onChangeValue} onClick={this.onAddItem} todos={this.state.todos} counter={this.state.todos.length}/>
             </div>
-            <div className="col-8">
+            <div className="col-8 pt-5">
               <TodoList todos={this.state.todos} onClick={this.onRemoveItem} rangeTop={this.state.rangeTop} rangeBottom={this.state.rangeBottom} />
             </div>
+          </div>
+          <div id="searchButtons">
+          <SearchButtons onClick2={this.addToRange} onClick3={this.substractToRange} counter={this.props.counter}/>
           </div>
         </div>
       </div>

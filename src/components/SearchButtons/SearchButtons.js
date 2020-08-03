@@ -4,8 +4,7 @@ class SearchButtons extends React.Component {
     render() {
         return (
             <div>
-                <button className="btn btn-light"  onClick={this.props.onClick3}>Prev</button>
-                <button type="submit" className="btn btn-primary mx-4" onClick={this.props.onClick}>Submit</button>
+                <button className="btn btn-light mx-2"  onClick={this.props.onClick3}>Prev</button>
                 <button className="btn btn-light"  onClick={this.props.onClick2}>Next</button>
             </div>
         )
