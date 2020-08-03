@@ -12,8 +12,8 @@ body {
 
 #searchButtons{
   position: absolute;
-  bottom: 5vh;
-  right: 8vh;
+  top: 50px;
+  right: 1vh;
 }
 
 
