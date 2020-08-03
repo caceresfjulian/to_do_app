@@ -36,6 +36,9 @@ class App extends React.Component {
 
   onAddItem(event) {
     event.preventDefault();
+    if(this.state.title.length === 0 || this.state.description.length === 0){
+      alert('Please check input values.')
+    }else{
     this.setState(state => {
       const todos = [...state.todos,
       {
@@ -49,7 +52,7 @@ class App extends React.Component {
         todos
       }
     })
-  }
+  }}
 
   addToRange(e) {
     e.preventDefault();
