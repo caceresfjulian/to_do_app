@@ -4,7 +4,7 @@ import Todos from '../Todos/Todos';
 class TodoList extends React.Component {
     render(){
         return(
-            <div className="row align-items-center h-100">
+            <div className="row align-items-center h-100 justify-content-center">
                 {
                     this.props.todos.map(todo => {
                         if (this.props.todos.indexOf(todo) < this.props.rangeTop && this.props.todos.indexOf(todo) >= this.props.rangeBottom){    
