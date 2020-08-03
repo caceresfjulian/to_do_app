@@ -58,7 +58,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <NavBar />
+        <NavBar counter={this.state.todos.length}/>
         <div className="container">
           <div className="row">
             <div className="col">
