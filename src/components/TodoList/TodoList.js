@@ -1,15 +1,14 @@
 import React from 'react';
 import Todos from '../Todos/Todos';
 
-
 class TodoList extends React.Component {
     render(){
         return(
             <div className="row">
                 {
                     this.props.todos.map(todo => {
-                        if (this.props.todos.indexOf(todo) < 9){    
-                        return( 
+                        if (this.props.todos.indexOf(todo) < this.props.rangeTop && this.props.todos.indexOf(todo) >= this.props.rangeBottom){    
+                        return(
                             <Todos 
                                 title={todo.title}
                                 description={todo.description}
