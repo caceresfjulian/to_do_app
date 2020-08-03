@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import TodoForm from '../TodoForm/TodoForm';
 import TodoList from '../TodoList/TodoList';
+import NavBar from '../NavBar/NavBar';
 
 class App extends React.Component {
   constructor(props) {
@@ -57,7 +58,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      <nav className="navbar navbar-light bg-light">Navbar</nav>
+        <NavBar />
         <div className="container">
           <div className="row">
             <div className="col">
