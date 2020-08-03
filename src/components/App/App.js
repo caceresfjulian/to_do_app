@@ -62,7 +62,7 @@ class App extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col">
-              <TodoForm onChange={this.onChangeValue} onClick={this.onAddItem} todos={this.state.todos} />
+              <TodoForm onChange={this.onChangeValue} onClick={this.onAddItem} todos={this.state.todos} counter={this.state.todos.length}/>
             </div>
             <div className="col-8">
               <TodoList todos={this.state.todos} onClick={this.onRemoveItem} />
