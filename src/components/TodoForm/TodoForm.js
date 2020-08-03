@@ -36,7 +36,7 @@ class TodoForm extends React.Component {
                                 <option value="agent 5">Agent 5</option>
                             </select>
                         </div>
-                        <SearchButtons onClick={this.props.onClick}/>
+                        <SearchButtons onClick={this.props.onClick} counter={this.props.counter}/>
                     </form>
                 </div>
             </div>
