@@ -2,6 +2,12 @@ import React from 'react';
 
 class Todos extends React.Component {
     render() {
+        let title;
+        if (this.props.title.length > 11){
+            title = `${this.props.title.slice(0, 8)}...`
+        }else{
+            title = this.props.title;
+        }
         let description;
         if (this.props.description.length > 13){
             description = `${this.props.description.slice(0, 13)}...`
@@ -11,7 +17,7 @@ class Todos extends React.Component {
         return (
             <div className="card col-3 m-2">
                 <div className="card-body">
-                    <h5 className="card-title">{this.props.title}</h5>
+                    <h5 className="card-title">{title}</h5>
                     <h6 className="card-subtitle mb-2 text-muted">{this.props.assignee}</h6>
                     <p className="card-text">{description}</p>                    
                     <h6 href="/" className="card-subtitle text-muted">{this.props.priority}</h6>
