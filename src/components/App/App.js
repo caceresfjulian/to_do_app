@@ -86,7 +86,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <NavBar counter={this.state.todos.length}/>
+        <NavBar counter={this.state.todos.length} page={this.state.rangeTop}/>
         <div className="container">
           <div className="row">
             <div className="col">
