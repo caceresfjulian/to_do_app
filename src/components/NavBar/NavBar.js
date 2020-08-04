@@ -9,8 +9,8 @@ class NavBar extends React.Component {
                     <span className="badge badge-pill badge-danger mx-2">{this.props.counter}</span>
                 </div>
                 <div>
-                <select className="form-control-sm border-dark">
-                    <option value="none">All</option>
+                <select className="form-control-sm border-dark" name="display" onChange={this.props.onChange}>
+                    <option value="all">All</option>
                     <option value="high">High</option>
                     <option value="normal">Normal</option>
                     <option value="low">Low</option>
