@@ -1,6 +1,15 @@
 import React from 'react';
 
 class Todos extends React.Component {
+    applyColor(priority){
+        if (priority === 'high'){
+            return {backgroundColor:"#F7C5C2"}
+        } else if ( priority === 'normal'){
+            return {backgroundColor: "#B4F7A4"}
+        } else {
+            return {backgroundColor: "#A4B2F7"}
+        }
+    }
     render() {
         let title;
         if (this.props.title.length > 11){
@@ -15,7 +24,7 @@ class Todos extends React.Component {
             description = this.props.description;
         }
         return (
-            <div className="card col-3 mx-2 my-1 task">
+            <div className="card col-3 mx-2 my-1 task" style={this.applyColor(this.props.priority)}>
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
                     <h6 className="card-subtitle mb-2 text-muted">{this.props.assignee}</h6>
