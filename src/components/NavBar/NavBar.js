@@ -8,6 +8,14 @@ class NavBar extends React.Component {
                     <span>Tasks</span>
                     <span className="badge badge-pill badge-danger mx-2">{this.props.counter}</span>
                 </div>
+                <div>
+                <select className="form-control-sm border-dark">
+                    <option value="none">All</option>
+                    <option value="high">High</option>
+                    <option value="normal">Normal</option>
+                    <option value="low">Low</option>
+                </select>
+                </div>
                 <span>{this.props.page/9} / {Math.ceil(this.props.counter/9)}</span>
             </nav>
         )
