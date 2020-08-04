@@ -11,11 +11,11 @@ class TodoForm extends React.Component {
                     <form>
                         <div className="form-group">
                             <label htmlFor="taskTitle">Title:</label>
-                            <input type="text" id="taskTitle" className="form-control" onChange={this.props.onChange} name="title"/>
+                            <input type="text" id="taskTitle" className={this.props.inputStyle} onChange={this.props.onChange} name="title"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="taskDescription">Description:</label>
-                            <input type="text" id="taskDescription" className="form-control" onChange={this.props.onChange} name="description"/>
+                            <input type="text" id="taskDescription" className={this.props.inputStyle} onChange={this.props.onChange} name="description"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="taskPriority">Priority:</label>

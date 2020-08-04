@@ -21,6 +21,7 @@ class App extends React.Component {
       assignee: 'agent 1',
       rangeTop: 9,
       rangeBottom: 0,
+      validation:'form-control',
     }
     this.onChangeValue = this.onChangeValue.bind(this);
     this.onAddItem = this.onAddItem.bind(this);
@@ -37,7 +38,9 @@ class App extends React.Component {
   onAddItem(event) {
     event.preventDefault();
     if(this.state.title.length === 0 || this.state.description.length === 0){
-      alert('Please check input values.')
+      this.setState({
+        validation: 'form-control border-danger'
+      })
     }else{
     this.setState(state => {
       const todos = [...state.todos,
@@ -49,7 +52,7 @@ class App extends React.Component {
       }];
 
       return {
-        todos
+        todos, validation: 'form-control'
       }
     })
   }}
@@ -93,7 +96,7 @@ class App extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col">
-              <TodoForm onChange={this.onChangeValue} onClick={this.onAddItem} todos={this.state.todos} counter={this.state.todos.length}/>
+              <TodoForm onChange={this.onChangeValue} onClick={this.onAddItem} todos={this.state.todos} counter={this.state.todos.length} inputStyle={this.state.validation}/>
             </div>
             <div className="col-8 pt-5">
               <TodoList todos={this.state.todos} onClick={this.onRemoveItem} rangeTop={this.state.rangeTop} rangeBottom={this.state.rangeBottom} />
