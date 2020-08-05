@@ -9,13 +9,13 @@ class NavBar extends React.Component {
                     <span className="badge badge-pill badge-danger mx-2">{this.props.counter}</span>
                 </div>
                 <div>
-                <select className="form-control-sm border-dark mx-4" name="display" onChange={this.props.onChange}>
+                <select className="form-control-sm border-dark mx-4" name="byPriority" onChange={this.props.onChange}>
                     <option value="all">All</option>
                     <option value="high">High</option>
                     <option value="normal">Normal</option>
                     <option value="low">Low</option>
                 </select>
-                <select className="form-control-sm border-dark" name="agentFilter">
+                <select className="form-control-sm border-dark" name="byAgent" onChange={this.props.onChange}>
                     <option value="all">All agents</option>
                     <option value="agent 1">Agent 1</option>
                     <option value="agent 2">Agent 2</option>

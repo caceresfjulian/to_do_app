@@ -24,7 +24,8 @@ class App extends React.Component {
       rangeTop: 9,
       rangeBottom: 0,
       validation:'form-control',
-      display: 'all',
+      byPriority: 'all',
+      byAgent: 'all',
     }
     this.onChangeValue = this.onChangeValue.bind(this);
     this.onAddItem = this.onAddItem.bind(this);
@@ -102,7 +103,7 @@ class App extends React.Component {
               <TodoForm onChange={this.onChangeValue} onClick={this.onAddItem} todos={this.state.todos} counter={this.state.todos.length} inputStyle={this.state.validation}/>
             </div>
             <div className="col-8 pt-5">
-              <TodoList todos={this.state.todos} onClick={this.onRemoveItem} rangeTop={this.state.rangeTop} rangeBottom={this.state.rangeBottom} display={this.state.display}/>
+              <TodoList todos={this.state.todos} onClick={this.onRemoveItem} rangeTop={this.state.rangeTop} rangeBottom={this.state.rangeBottom} byPriority={this.state.byPriority}/>
             </div>
           </div>
           <div id="searchButtons">

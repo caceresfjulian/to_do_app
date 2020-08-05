@@ -43,7 +43,7 @@ class TodoList extends React.Component {
             <div className="row align-items-center h-100 justify-content-center">
                 {
                     this.props.todos.map(todo => 
-                    this.showByIndex(this.showByPriority(todo, this.props.display))
+                    this.showByIndex(this.showByPriority(todo, this.props.byPriority))
                     )
                 }
             </div>
