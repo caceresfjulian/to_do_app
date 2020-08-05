@@ -16,6 +16,16 @@ body {
   right: 1vh;
 }
 
+#overlay {
+  height: 100%;
+  display: flex;
+  
+}
+
+#overlay .card {
+  border-radius: 20px;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

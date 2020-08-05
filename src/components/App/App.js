@@ -5,6 +5,7 @@ import TodoList from '../TodoList/TodoList';
 import {tasksOnScreen} from '../TodoList/TodoList';
 import NavBar from '../NavBar/NavBar';
 import SearchButtons from '../SearchButtons/SearchButtons';
+import Detail from '../Detail/Detail';
 
 
 class App extends React.Component {
@@ -96,6 +97,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+      <Detail />
         <NavBar counter={this.state.todos.length} page={this.state.rangeTop} onChange={this.onChangeValue}/>
         <div className="container">
           <div className="row">
