@@ -1,9 +1,11 @@
 import React from 'react';
 import Todos from '../Todos/Todos';
 let count = 0;
+export let tasksOnScreen = 0;
 
 class TodoList extends React.Component {
     showByIndex(todo){
+        tasksOnScreen = todo.id + 1;
         if (todo.id < this.props.rangeTop && todo.id >= this.props.rangeBottom){
             return(
                 <Todos 

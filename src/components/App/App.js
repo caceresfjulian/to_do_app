@@ -2,8 +2,10 @@ import React from 'react';
 import './App.css';
 import TodoForm from '../TodoForm/TodoForm';
 import TodoList from '../TodoList/TodoList';
+import {tasksOnScreen} from '../TodoList/TodoList';
 import NavBar from '../NavBar/NavBar';
 import SearchButtons from '../SearchButtons/SearchButtons';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -60,7 +62,7 @@ class App extends React.Component {
 
   addToRange(e) {
     e.preventDefault();
-    if (this.state.todos.length > this.state.rangeTop) {
+    if (tasksOnScreen > this.state.rangeTop) {
         this.setState({
           rangeTop: this.state.rangeTop + 9, 
           rangeBottom: this.state.rangeBottom + 9
