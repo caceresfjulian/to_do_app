@@ -84,10 +84,10 @@ class App extends React.Component {
     }
   }
 
-  onRemoveItem(index) {
+  onRemoveItem(index, title ) {
     this.setState({
       todos: this.state.todos.filter(e => {
-        return index !== this.state.todos.indexOf(e)
+        return index !== e.id || title !== e.title ;
       })
     })
   }

@@ -30,7 +30,7 @@ class Todos extends React.Component {
                     <h6 className="card-subtitle mb-2 text-muted">{this.props.assignee}</h6>
                     <p className="card-text">{description}</p>
                     <h6 href="/" className="card-subtitle text-muted">{this.props.priority}</h6>
-                    <button className="btn btn-danger mt-4 btn-sm" onClick={() => this.props.onClick(this.props.id)}>Delete <span className="badge badge-pill badge-light">{this.props.id + 1}</span></button>
+                    <button className="btn btn-danger mt-4 btn-sm" onClick={() => this.props.onClick(this.props.id, this.props.title)}>Delete <span className="badge badge-pill badge-light">{this.props.id + 1}</span></button>
                 </div>
             </div>
         )
