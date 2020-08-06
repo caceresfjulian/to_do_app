@@ -26,6 +26,10 @@ body {
   border-radius: 20px;
 }
 
+.taskTitle, .close{
+  cursor: pointer;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

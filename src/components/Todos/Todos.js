@@ -26,7 +26,7 @@ class Todos extends React.Component {
         return (
             <div className="card col-3 mx-2 my-1 task" style={this.applyColor(this.props.priority)}>
                 <div className="card-body">
-                    <h5 className="card-title">{title}</h5>
+                    <h5 className="card-title taskTitle" onClick={ () => this.props.showDetail(this.props.title, this.props.description, this.props.assignee, this.props.priority)}>{title}</h5>
                     <h6 className="card-subtitle mb-2 text-muted">{this.props.assignee}</h6>
                     <p className="card-text">{description}</p>
                     <h6 href="/" className="card-subtitle text-muted">{this.props.priority}</h6>

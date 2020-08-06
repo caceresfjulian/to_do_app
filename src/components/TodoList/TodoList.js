@@ -16,6 +16,7 @@ class TodoList extends React.Component {
                     key={this.props.todos.indexOf(todo)}
                     id={todo.id}
                     onClick={this.props.onClick}
+                    showDetail={this.props.showDetail}
                 />
             )} else {
                 return false 
