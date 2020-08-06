@@ -13,10 +13,10 @@ class App extends React.Component {
     super(props);
     this.state = {
       todos: [
-        { title: 'Task 1', description: 'Description 1', priority: 'high', assignee: 'agent 1' },
-        { title: 'Task 2', description: 'Description 2', priority: 'low', assignee: 'agent 2' },
-        { title: 'Task 3', description: 'Description 3', priority: 'normal', assignee: 'agent 3' },
-        { title: 'Task 4', description: 'Description 4', priority: 'high', assignee: 'agent 4' },
+        { title: 'Task 1', description: '1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis mollitia laboriosam exercitationem necessitatibus, repellat alias inventore neque ducimus. Ex iusto saepe facilis sint rerum amet nam dolores magnam sunt aliquid, eos eius! Quaerat distinctio ut, maiores quo ratione est magnam vel exercitationem dicta enim eligendi dolore perspiciatis, delectus iure expedita?', priority: 'high', assignee: 'agent 1' },
+        { title: 'Task 2', description: '2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis mollitia laboriosam exercitationem necessitatibus, repellat alias inventore neque ducimus. Ex iusto saepe facilis sint rerum amet nam dolores magnam sunt aliquid, eos eius! Quaerat distinctio ut, maiores quo ratione est magnam vel exercitationem dicta enim eligendi dolore perspiciatis, delectus iure expedita?', priority: 'low', assignee: 'agent 2' },
+        { title: 'Task 3', description: '3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis mollitia laboriosam exercitationem necessitatibus, repellat alias inventore neque ducimus. Ex iusto saepe facilis sint rerum amet nam dolores magnam sunt aliquid, eos eius! Quaerat distinctio ut, maiores quo ratione est magnam vel exercitationem dicta enim eligendi dolore perspiciatis, delectus iure expedita?', priority: 'normal', assignee: 'agent 3' },
+        { title: 'Task 4', description: '4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis mollitia laboriosam exercitationem necessitatibus, repellat alias inventore neque ducimus. Ex iusto saepe facilis sint rerum amet nam dolores magnam sunt aliquid, eos eius! Quaerat distinctio ut, maiores quo ratione est magnam vel exercitationem dicta enim eligendi dolore perspiciatis, delectus iure expedita?', priority: 'high', assignee: 'agent 4' },
       ],
       title: '',
       description: '',

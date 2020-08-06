@@ -16,7 +16,7 @@ class Detail extends React.Component {
                            <span className="text-right mx-3 mt-2 close" onClick={ () => this.props.onClick(this.props.info.title, this.props.info.description, this.props.info.assignee, this.props.info.priority )}>X</span>
                                 <div className="card-body text-center mb-4">
                                     <div className="card-title"><h2>{this.props.info.title}</h2></div>
-                                    <div className="card-subtitle text-muted"><h4>{this.props.info.assignee} - {this.props.info.priority}</h4></div>
+                                    <h4><span className="badge badge-dark mx-3 p-2">{this.props.info.priority}</span><span className="text-muted">{String(this.props.info.assignee)[0].toUpperCase()+String(this.props.info.assignee).slice(1)}</span></h4>
                                     <p className="card-text pt-4"> {this.props.info.description}</p>
                                 </div>
                            </div> 
