@@ -12,14 +12,14 @@ class Todos extends React.Component {
     }
     render() {
         let title;
-        if (this.props.title.length > 11) {
-            title = `${this.props.title.slice(0, 8)}...`
+        if (this.props.title.length > 7) {
+            title = `${this.props.title.slice(0, 5)}...`
         } else {
             title = this.props.title;
         }
         let description;
-        if (this.props.description.length > 13) {
-            description = `${this.props.description.slice(0, 13)}...`
+        if (this.props.description.length > 8) {
+            description = `${this.props.description.slice(0, 5)}...`
         } else {
             description = this.props.description;
         }
