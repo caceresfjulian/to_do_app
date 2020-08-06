@@ -59,6 +59,10 @@ class TodoList extends React.Component {
         count = 0;
     }
 
+    componentDidMount(){
+        count = 0;
+    }
+
     render(){
         return(
             <div className="row align-items-center h-100 justify-content-center">

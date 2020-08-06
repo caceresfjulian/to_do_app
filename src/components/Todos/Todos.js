@@ -24,13 +24,12 @@ class Todos extends React.Component {
             description = this.props.description;
         }
         return (
-            <div className="card col-3 mx-2 my-1 task" style={this.applyColor(this.props.priority)}>
+            <div className="card col-3 m-3 task " style={this.applyColor(this.props.priority)}>
                 <div className="card-body">
                     <h5 className="card-title taskTitle" onClick={ () => this.props.showDetail(this.props.title, this.props.description, this.props.assignee, this.props.priority)}>{title}</h5>
                     <h6 className="card-subtitle mb-2 text-muted">{this.props.assignee}</h6>
                     <p className="card-text">{description}</p>
-                    <h6 href="/" className="card-subtitle text-muted">{this.props.priority}</h6>
-                    <button className="btn btn-danger mt-4 btn-sm" onClick={() => this.props.onClick(this.props.id, this.props.title)}>Delete <span className="badge badge-pill badge-light">{this.props.id + 1}</span></button>
+                    <button className="btn btn-danger btn-sm" onClick={() => this.props.onClick(this.props.id, this.props.title)}>Delete</button>
                 </div>
             </div>
         )

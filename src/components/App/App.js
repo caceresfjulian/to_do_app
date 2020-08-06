@@ -109,12 +109,12 @@ class App extends React.Component {
       <div>
       <Detail showDetail={this.state.detail} onClick={this.showDetail} info={this.state.detailInfo}/>
         <NavBar counter={this.state.todos.length} page={this.state.rangeTop} onChange={this.onChangeValue}/>
-        <div className="container">
-          <div className="row">
-            <div className="col">
+        <div className="general">
+          <div className="row row1">
+            <div className="col col1">
               <TodoForm onChange={this.onChangeValue} onClick={this.onAddItem} todos={this.state.todos} counter={this.state.todos.length} inputStyle={this.state.validation}/>
             </div>
-            <div className="col-8 pt-5">
+            <div className="col-8">
               <TodoList todos={this.state.todos} onClick={this.onRemoveItem} rangeTop={this.state.rangeTop} rangeBottom={this.state.rangeBottom} byPriority={this.state.byPriority} byAgent={this.state.byAgent} showDetail={this.showDetail}/>
             </div>
           </div>

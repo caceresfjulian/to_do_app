@@ -4,9 +4,9 @@ import logo from './logo.svg';
 class TodoForm extends React.Component {
     render() {
         return (
-            <div className="container text-center">
+            
+                <div className="card p-3 text-center todoForm">
                 <img src={logo} className="App-logo" alt="logo"/>
-                <div className="card p-3">
                 <h3 className="card-title pt-2">Task Generator</h3>
                     <form>
                         <div className="form-group">
@@ -38,7 +38,7 @@ class TodoForm extends React.Component {
                         <button type="submit" className="btn btn-primary mx-4" onClick={this.props.onClick}>Submit</button>
                     </form>
                 </div>
-            </div>
+            
         )
     }
 }

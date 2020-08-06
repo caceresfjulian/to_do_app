@@ -30,6 +30,31 @@ body {
   cursor: pointer;
 }
 
+.general {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 91vh;
+  padding: 0;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.row1{
+  width: 100%
+}
+
+.col1 {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.todoForm {
+  width: 100%;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
