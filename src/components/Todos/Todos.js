@@ -10,6 +10,16 @@ class Todos extends React.Component {
             return { backgroundColor: "#A4B2F7" }
         }
     }
+
+    adjustSizeLayout(){
+        if (window.screen.width <= 599 ){
+            return "card task"
+        }else if (window.screen.width >= 600 && window.screen.width < 800){
+            return "card col-4 task"
+        } else {
+            return  "card col-3 m-3 task"
+        }
+    }
     render() {
         let title;
         if (this.props.title.length > 7) {
@@ -24,7 +34,7 @@ class Todos extends React.Component {
             description = this.props.description;
         }
         return (
-            <div className="card col-3 m-3 task " style={this.applyColor(this.props.priority)}>
+            <div className={this.adjustSizeLayout()} style={this.applyColor(this.props.priority)}>
                 <div className="card-body">
                     <h5 className="card-title taskTitle" onClick={ () => this.props.showDetail(this.props.title, this.props.description, this.props.assignee, this.props.priority)}>{title}</h5>
                     <h6 className="card-subtitle mb-2 text-muted">{this.props.assignee}</h6>
