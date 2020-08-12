@@ -28,7 +28,9 @@ class App extends React.Component {
       byPriority: 'all',
       byAgent: 'all',
       detail: false,      
-      detailInfo:''
+      detailInfo:'',
+      windowWidth: 0,
+      windowHeight: 0
     }
     this.onChangeValue = this.onChangeValue.bind(this);
     this.onAddItem = this.onAddItem.bind(this);
@@ -36,6 +38,23 @@ class App extends React.Component {
     this.addToRange = this.addToRange.bind(this);
     this.substractToRange = this.substractToRange.bind(this);
     this.showDetail = this.showDetail.bind(this);
+    this.updateDimensions = this.updateDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateDimensions();
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
+  }
+
+  updateDimensions() {
+    let windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
+    let windowHeight = typeof window !== "undefined" ? window.innerHeight : 0;
+
+    this.setState({ windowWidth, windowHeight });
   }
 
   onChangeValue(event) {
