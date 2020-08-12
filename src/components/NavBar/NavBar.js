@@ -4,8 +4,8 @@ import SearchButtons from '../SearchButtons/SearchButtons';
 class NavBar extends React.Component {
     render() {
         return (
-            <nav className="navbar navbar-light bg-light fixed-top d-flex justify-content-between">
-                <div className="mb-2 mb-sm-0 d-flex align-items-center justify-content-start">
+            <nav className="navbar navbar-light bg-light fixed-top d-flex justify-content-sm-between justify-content-center">
+                <div className="d-flex align-items-center justify-content-start">
                     <span>Tasks</span>
                     <span className="badge badge-pill badge-danger mx-2">{this.props.counter}</span>
                 <select className="form-control-sm border-dark mx-3 mx-sm-4" name="byPriority" onChange={this.props.onChange}>
@@ -24,7 +24,7 @@ class NavBar extends React.Component {
                 </select>
                 </div>
                 <div className="d-flex align-items-center">
-                    <span className="d-inline">{this.props.page/9} / {Math.ceil(this.props.counter/9)}</span>
+                    <span className="d-inline mx-2">{this.props.page/9} / {Math.ceil(this.props.counter/9)}</span>
                     <SearchButtons onClick2={this.props.onClick2} onClick3={this.props.onClick3} />
                 </div>
             </nav>
