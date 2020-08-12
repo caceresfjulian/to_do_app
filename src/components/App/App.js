@@ -108,7 +108,7 @@ class App extends React.Component {
     return (
       <div>
         <Detail showDetail={this.state.detail} onClick={this.showDetail} info={this.state.detailInfo} />
-        <NavBar counter={this.state.todos.length} page={this.state.rangeTop} onChange={this.onChangeValue} />
+        <NavBar counter={this.state.todos.length} page={this.state.rangeTop} onChange={this.onChangeValue} onClick2={this.addToRange} onClick3={this.substractToRange}/>
         <div className="general d-block d-sm-flex">
           <div className="row w-100 mt-sm-0 m-0">
             <div className="col-sm mx-3 mx-sm-0 py-3 mt-sm-0 py-sm-0">
