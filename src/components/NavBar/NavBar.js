@@ -1,14 +1,13 @@
 import React from 'react';
+import SearchButtons from '../SearchButtons/SearchButtons';
 
 class NavBar extends React.Component {
     render() {
         return (
-            <nav className="navbar navbar-light bg-light">
-                <div>
+            <nav className="navbar navbar-light bg-light fixed-top d-flex justify-content-between">
+                <div className="mb-2 mb-sm-0">
                     <span>Tasks</span>
                     <span className="badge badge-pill badge-danger mx-2">{this.props.counter}</span>
-                </div>
-                <div>
                 <select className="form-control-sm border-dark mx-4" name="byPriority" onChange={this.props.onChange}>
                     <option value="all">All</option>
                     <option value="high">High</option>
@@ -24,7 +23,10 @@ class NavBar extends React.Component {
                     <option value="agent 5">Agent 5</option>
                 </select>
                 </div>
-                <span>{this.props.page/9} / {Math.ceil(this.props.counter/9)}</span>
+                <div className="d-flex align-items-center">
+                    <span className="d-inline">{this.props.page/9} / {Math.ceil(this.props.counter/9)}</span>
+                    <SearchButtons />
+                </div>
             </nav>
         )
     }

@@ -10,12 +10,6 @@ body {
   pointer-events: none;
 }
 
-#searchButtons{
-  position: absolute;
-  top: 70px;
-  right: 1vh;
-}
-
 #overlay {
   height: 100%;
   display: flex;
