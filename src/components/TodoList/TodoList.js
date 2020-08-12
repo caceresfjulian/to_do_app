@@ -65,7 +65,7 @@ class TodoList extends React.Component {
 
     render(){
         return(
-            <div className="row align-items-center h-100 justify-content-center mr-0 mr-sm-1 mr-md-0">
+            <div className="row align-items-center h-100 justify-content-center mr-sm-1 mr-md-0">
                 {
                     this.props.todos.map(todo => 
                     this.showByIndex(this.showByAgent(this.showByPriority(todo, this.props.byPriority), this.props.byAgent))
