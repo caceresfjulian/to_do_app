@@ -9,13 +9,7 @@ body {
   height: 70px;
 }
 
-#overlay {
-  height: 100%;
-  display: flex;
-  
-}
-
-#overlay .card {
+ #overlayCard {
   border-radius: 20px;
 }
 
@@ -27,7 +21,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 91vh;
+  height: 93vh;
   padding: 0;
   max-width: 1200px;
   margin: auto;
