@@ -110,9 +110,9 @@ class App extends React.Component {
       <div>
         <Detail showDetail={this.state.detail} onClick={this.showDetail} info={this.state.detailInfo} />
         <NavBar counter={this.state.todos.length} page={this.state.rangeTop} onChange={this.onChangeValue} />
-        <div className="general">
-          <div className="row w-100 mt-5 mt-sm-0">
-            <div className="col-sm mt-5 mx-3 mx-sm-0 pt-5 mt-sm-0 pt-sm-0">
+        <div className="general d-block d-sm-flex">
+          <div className="row w-100 mt-sm-0 m-0">
+            <div className="col-sm mx-3 mx-sm-0 pt-5 mt-sm-0 pt-sm-0">
               <TodoForm onChange={this.onChangeValue} onClick={this.onAddItem} todos={this.state.todos} counter={this.state.todos.length} inputStyle={this.state.validation} />
             </div>
             <div className="col-sm-8">
