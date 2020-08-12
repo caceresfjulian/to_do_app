@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import TodoForm from '../TodoForm/TodoForm';
 import TodoList from '../TodoList/TodoList';
-import {tasksOnScreen} from '../TodoList/TodoList';
+import { tasksOnScreen } from '../TodoList/TodoList';
 import NavBar from '../NavBar/NavBar';
 import SearchButtons from '../SearchButtons/SearchButtons';
 import Detail from '../Detail/Detail';
@@ -24,13 +24,11 @@ class App extends React.Component {
       assignee: 'agent 1',
       rangeTop: 9,
       rangeBottom: 0,
-      validation:'form-control',
+      validation: 'form-control',
       byPriority: 'all',
       byAgent: 'all',
-      detail: false,      
-      detailInfo:'',
-      windowWidth: 0,
-      windowHeight: 0
+      detail: false,
+      detailInfo: '',
     }
     this.onChangeValue = this.onChangeValue.bind(this);
     this.onAddItem = this.onAddItem.bind(this);
@@ -38,23 +36,6 @@ class App extends React.Component {
     this.addToRange = this.addToRange.bind(this);
     this.substractToRange = this.substractToRange.bind(this);
     this.showDetail = this.showDetail.bind(this);
-    this.updateDimensions = this.updateDimensions.bind(this);
-  }
-
-  componentDidMount() {
-    this.updateDimensions();
-    window.addEventListener("resize", this.updateDimensions);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions);
-  }
-
-  updateDimensions() {
-    let windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
-    let windowHeight = typeof window !== "undefined" ? window.innerHeight : 0;
-
-    this.setState({ windowWidth, windowHeight });
   }
 
   onChangeValue(event) {
@@ -64,81 +45,82 @@ class App extends React.Component {
 
   onAddItem(event) {
     event.preventDefault();
-    if(this.state.title.length === 0 || this.state.description.length === 0){
+    if (this.state.title.length === 0 || this.state.description.length === 0) {
       this.setState({
         validation: 'form-control border-danger'
       })
-    }else{
-    this.setState(state => {
-      const todos = [...state.todos,
-      {
-        title: state.title,
-        description: state.description,
-        priority: state.priority,
-        assignee: state.assignee,
-      }];
+    } else {
+      this.setState(state => {
+        const todos = [...state.todos,
+        {
+          title: state.title,
+          description: state.description,
+          priority: state.priority,
+          assignee: state.assignee,
+        }];
 
-      return {
-        todos, validation: 'form-control'
-      }
-    })
-  }}
+        return {
+          todos, validation: 'form-control'
+        }
+      })
+    }
+  }
 
   addToRange(e) {
     e.preventDefault();
     if (tasksOnScreen > this.state.rangeTop) {
-        this.setState({
-          rangeTop: this.state.rangeTop + 9, 
-          rangeBottom: this.state.rangeBottom + 9
-        })
-        
+      this.setState({
+        rangeTop: this.state.rangeTop + 9,
+        rangeBottom: this.state.rangeBottom + 9
+      })
+
     } else {
-        return false;
+      return false;
     }
-}
+  }
   substractToRange(e) {
     e.preventDefault();
     if (this.state.rangeBottom > 0) {
-        this.setState({
+      this.setState({
         rangeTop: this.state.rangeTop - 9,
         rangeBottom: this.state.rangeBottom - 9,
-        });
+      });
     } else {
-        return false;
+      return false;
     }
   }
 
-  onRemoveItem(index, title ) {
+  onRemoveItem(index, title) {
     this.setState({
       todos: this.state.todos.filter(e => {
-        return index !== e.id || title !== e.title ;
+        return index !== e.id || title !== e.title;
       })
     })
   }
 
-  showDetail(title, description, assignee, priority){
+  showDetail(title, description, assignee, priority) {
     this.setState({
       detail: !this.state.detail,
-      detailInfo: {title: title, description: description, assignee: assignee, priority: priority},
+      detailInfo: { title: title, description: description, assignee: assignee, priority: priority },
     })
   }
 
   render() {
     return (
       <div>
-      <Detail showDetail={this.state.detail} onClick={this.showDetail} info={this.state.detailInfo}/>
-        <NavBar counter={this.state.todos.length} page={this.state.rangeTop} onChange={this.onChangeValue}/>
+        <Detail showDetail={this.state.detail} onClick={this.showDetail} info={this.state.detailInfo} />
+        <NavBar counter={this.state.todos.length} page={this.state.rangeTop} onChange={this.onChangeValue} />
         <div className="general">
-          <div className="row row1">
-            <div className="col col1">
-              <TodoForm onChange={this.onChangeValue} onClick={this.onAddItem} todos={this.state.todos} counter={this.state.todos.length} inputStyle={this.state.validation}/>
+          <div className="row w-100 mt-5 mt-sm-0">
+            <div className="col-sm mt-5 mx-3 mx-sm-0 pt-5 mt-sm-0 pt-sm-0">
+              <TodoForm onChange={this.onChangeValue} onClick={this.onAddItem} todos={this.state.todos} counter={this.state.todos.length} inputStyle={this.state.validation} />
             </div>
-            <div className="col-8">
-              <TodoList todos={this.state.todos} onClick={this.onRemoveItem} rangeTop={this.state.rangeTop} rangeBottom={this.state.rangeBottom} byPriority={this.state.byPriority} byAgent={this.state.byAgent} showDetail={this.showDetail}/>
+            <div className="col-sm-8">
+              <TodoList todos={this.state.todos} onClick={this.onRemoveItem} rangeTop={this.state.rangeTop} rangeBottom={this.state.rangeBottom} byPriority={this.state.byPriority} byAgent={this.state.byAgent} showDetail={this.showDetail} />
             </div>
           </div>
           <div id="searchButtons">
-          <SearchButtons onClick2={this.addToRange} onClick3={this.substractToRange} counter={this.props.counter}/>
+            <SearchButtons onClick2={this.addToRange} onClick3={this.substractToRange} counter={this.props.counter} />
           </div>
         </div>
       </div>

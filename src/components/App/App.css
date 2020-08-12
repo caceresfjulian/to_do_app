@@ -40,16 +40,8 @@ body {
   margin: auto;
 }
 
-.row1{
-  width: 100%
-}
-
-.col1 {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  justify-content: center;
+.navbar {
+  z-index: 10;
 }
 
 .todoForm {
