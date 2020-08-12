@@ -5,10 +5,10 @@ class NavBar extends React.Component {
     render() {
         return (
             <nav className="navbar navbar-light bg-light fixed-top d-flex justify-content-sm-between justify-content-center">
-                <div className="d-flex align-items-center justify-content-start">
+                <div className="d-sm-flex align-items-center justify-content-start d-block">
                     <span>Tasks</span>
                     <span className="badge badge-pill badge-danger mx-2">{this.props.counter}</span>
-                <select className="form-control-sm border-dark mx-3 mx-sm-4" name="byPriority" onChange={this.props.onChange}>
+                <select className="form-control-sm border-dark mx-1 mx-sm-4" name="byPriority" onChange={this.props.onChange}>
                     <option value="all">All</option>
                     <option value="high">High</option>
                     <option value="normal">Normal</option>
@@ -24,7 +24,7 @@ class NavBar extends React.Component {
                 </select>
                 </div>
                 <div className="d-flex align-items-center">
-                    <span className="d-inline mx-2">{this.props.page/9} / {Math.ceil(this.props.counter/9)}</span>
+                    <span className="d-inline mx-5 mx-sm-4">{this.props.page/9} / {Math.ceil(this.props.counter/9)}</span>
                     <SearchButtons onClick2={this.props.onClick2} onClick3={this.props.onClick3} />
                 </div>
             </nav>
