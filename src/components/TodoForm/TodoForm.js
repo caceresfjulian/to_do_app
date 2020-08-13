@@ -14,11 +14,11 @@ class TodoForm extends React.Component {
                 <form>
                     <div className="form-group">
                         <label htmlFor="taskTitlemini">Title:</label>
-                        <input type="text" id="taskTitlemini" className={this.props.inputStyle} onChange={this.props.onChange} name="title" />
+                        <input type="text" id="taskTitlemini" placeholder="Max. 25 characters" className={this.props.inputStyle} onChange={this.props.onChange} name="title" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="taskDescriptionmini">Description:</label>
-                        <input type="text" id="taskDescriptionmini" className={this.props.inputStyle} onChange={this.props.onChange} name="description" />
+                        <input type="text" id="taskDescriptionmini"  placeholder="Max. 380 characters" className={this.props.inputStyle} onChange={this.props.onChange} name="description" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="taskPrioritymini">Priority:</label>
@@ -48,11 +48,11 @@ class TodoForm extends React.Component {
                 <form>
                     <div className="form-group">
                         <label htmlFor="taskTitle">Title:</label>
-                        <input type="text" id="taskTitle" className={this.props.inputStyle} onChange={this.props.onChange} name="title" />
+                        <input type="text" id="taskTitle" placeholder="Max. 25 characters" className={this.props.inputStyle} onChange={this.props.onChange} name="title" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="taskDescription">Description:</label>
-                        <input type="text" id="taskDescription" className={this.props.inputStyle} onChange={this.props.onChange} name="description" />
+                        <input type="text" id="taskDescription"  placeholder="Max. 380 characters" className={this.props.inputStyle} onChange={this.props.onChange} name="description" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="taskPriority">Priority:</label>
