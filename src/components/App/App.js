@@ -48,7 +48,11 @@ class App extends React.Component {
       this.setState({
         validation: 'form-control border-danger'
       })
-    } else {
+    } else if (this.state.title.length > 25 || this.state.description.length > 380){
+      this.setState({
+        validation: 'form-control border-danger'
+      })
+    }else {
       this.setState(state => {
         const todos = [...state.todos,
         {
