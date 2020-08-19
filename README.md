@@ -1,3 +1,15 @@
+# To Do App
+
+To Do App es una aplicación web responsive de front-end para gestionar tareas.
+
+# Lenguajes
+
+-HTML5
+-CSS3: BootStrap (flexbox).
+-JavaScript: React (JSX).
+
+El propósito del proyecto es desarrollar una SPA (Single Page Application) para la administración de tareas teniendo en cuenta su funcionalidad en diferentes tamaños de pantalla. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
